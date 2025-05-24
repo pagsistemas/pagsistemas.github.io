@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas Web - Práctica de Estudiantes de la Técnica de Sistemas Teleinformáticos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32?text=TS">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e6e9f0 0%, #f4f4f9 100%);
+            opacity: 0;
+            transition: opacity 1.5s ease-in;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.2em;
+            margin: 0;
+            font-weight: 700;
+            animation: fadeIn 2s ease-in forwards, colorChange 8s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes colorChange {
+            0% { color: #ffffff; }
+            33% { color: #81c784; }
+            66% { color: #64b5f6; }
+            100% { color: #ffffff; }
+        }
+       .header-image {
+            display: block;
+            max-width: 200px; /* Tamaño reducido */
+            width: 50%;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+        }
+        .header-image.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        p {
+            text-align: justify;
+            max-width: 900px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #34495e;
+        }
+        .filter-container {
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .filter-container input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        table {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: 700;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+            transition: background-color 0.3s ease;
+        }
+        a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #f39c12;
+        }
+        .error {
+            color: #e74c3c;
+            font-style: italic;
+        }
+        .no-link {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .scroll-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px auto;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .scroll-link:hover {
+            background-color: #f39c12;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .header-image {
+                max-width: 90%;
+            }
+            table {
+                width: 95%;
+            }
+            .filter-container input {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Páginas Web - Práctica de Estudiantes de la Técnica de Sistemas Teleinformáticos</h1>
+    </header>
+    <img src="ESCUDO.jpg" alt="Imagen del Proyecto" class="header-image" width="10">
+    <p>Los estudiantes de la Técnica de Sistemas Teleinformáticos de la Sede San Andres III han desarrollado una serie de páginas web como parte de su práctica académica. Este proyecto consistió en la creación de sitios web funcionales y creativos, aplicando conocimientos de HTML, CSS y otras tecnologías web. A continuación, se presenta un cuadro con los enlaces a las páginas web desarrolladas por los estudiantes, donde se pueden observar sus trabajos.</p>
+    <div class="filter-container">
+        <input type="text" id="searchInput" placeholder="Buscar estudiante...">
+    </div>
+    <a href="#table-section" class="scroll-link">Ver enlaces de las páginas</a>
+    <table id="table-section">
+        <tr>
+            <th>Nombre del Estudiante</th>
+            <th>Enlace a la Página Web</th>
+        </tr>
+        <tr>
+            <td>Acosta Diaz Jean Pierre</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Acosta Mendoza Carmen Michel</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Alvarez Carreño Emanuel</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Alvarez Rios Bladimir</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Angarita Meneses Jexon Andrey</td>
+            <td><a href="https://kevinfino.github.io/deportesycarros.github.com/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Bayona Ravelo Paula Norelis</td>
+            <td><a href="https://lorenavarga.github.io/cabellospequ.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Becerra Cuevas Natalia</td>
+            <td><a href="https://nataliabecerracuevas.github.io/danzas.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Camacho Beltran Jhojan Estiven</td>
+            <td><a href="https://github.com/pagsistemas/subwoofer.github.io/settings/pages" target="_blank" class="error">Ver página (tiene error)</a></td>
+        </tr>
+        <tr>
+            <td>Carreño Montero Ronald David</td>
+            <td><a href="https://rxnald-dxvid-12.github.io/Ronald.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Castellanos Carrascal Cristian</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Chacon Celis Nicol Dallana</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Chacon Zambrano Wuillian Jesus</td>
+            <td><a href="https://pagsistemas.github.io/paginademotoswuillian.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Daza Quintero Jhon Sebastian</td>
+            <td><a href="https://loritonet44.github.io/DAZA_QUINTERO.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Duran Alba Jhonatan</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Fino Luna Keyyn Diyaniro</td>
+            <td><a href="https://kevinfino.github.io/deportesycarros.github.io/" target="_blank" class="error">Ver página (tiene error)</a></td>
+        </tr>
+        <tr>
+            <td>Garcia Pedraza Yhojan Sebastian</td>
+            <td><a href="https://stepfane.github.io/deportesgarcia.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Guerra Becerra Deivy Santiago</td>
+            <td><a href="https://loritonet44.github.io/deivy_guerra.github.io/index.html" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Gutierrez Contreras Juan Carlos</td>
+            <td><a href="https://loritonet44.github.io/juan_cartos.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Jurado Valencia Yeiny Daniela</td>
+            <td><a href="https://pagsistemas.github.io/danieta.github.io/" target="_blank" class="error">Ver página (tiene error)</a></td>
+        </tr>
+        <tr>
+            <td>Leal Africano Sharith Patricia</td>
+            <td><a href="https://pagsistemas.github.io/paginasharithleal.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Leal Hernandez Darwin Manuel</td>
+            <td><a href="https://pagsistemas.github.io/paginadarwinleal.github.io/"   target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Monsalve Fernandez Samuel</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Morantes Herrera Margarita</td>
+            <td><a href="https://loritonet44.github.io/MARGARITAMORANTES.io/index.html" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Moreno Briceño Carleidis Fabiola</td>
+            <td><a href="https://carleidis.github.io/u-asypeinados.github.io/" target="_blank" class="error">Ver página (tiene error)</a></td>
+        </tr>
+        <tr>
+            <td>Moreno Gonzalez Yoiver Daniel</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Paya Parada Deimar Yojan</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Piñero Marquez Jesus Leonardo</td>
+            <td><a href="https://loritonet44.github.io/jesus_pi-eros.io/index.html" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Rodriguez Blanco Kevin Gabriel</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Rodriguez Maldonado Dayron</td>
+            <td><a href="https://loritonet44.github.io/dairon_rodrigues.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Rodriguez Ordoñez Emerson</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Sanchez Nuñez Jefryn Alonso</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Sanjuan Meneses Jhonatan Smid</td>
+            <td><a href="https://jhonatansanjuan.github.io/paginasanjuan.github.io/" target="_blank" class="error">Ver página (tiene error)</a></td>
+        </tr>
+        <tr>
+            <td>Vargas Carrascal Viviana Vanesa</td>
+            <td><a href="https://loritonet44.github.io/VANESA.github.io/" target="_blank">Ver página</a></td>
+        </tr>
+        <tr>
+            <td>Vargas Ovalles Angel Yulian</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+        <tr>
+            <td>Vargas Torres Sindy Lorena</td>
+            <td><a href="https://orenavarga.github.io/elartedelbaite.github.io/" target="_blank" class="error">Ver página (tiene error)</a></td>
+        </tr>
+        <tr>
+            <td>Zapata Grisales Angel Alberto</td>
+            <td class="no-link">No entregó el link del dominio</td>
+        </tr>
+    </table>
+    <footer>
+        <p>Técnica de Sistemas Teleinformáticos - Proyecto Académico 2025</p>
+    </footer>
+    <script>
+        // Añadir clase 'loaded' al cargar la página
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            document.querySelector('.header-image').classList.add('loaded');
+        });
+
+        // Desplazamiento suave
+        document.querySelector('.scroll-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = e.target.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Filtro de búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#table-section tr:not(:first-child)');
+            rows.forEach(row => {
+                const name = row.cells[0].textContent.toLowerCase();
+                row.style.display = name.includes(searchTerm) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
